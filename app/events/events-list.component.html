@@ -1,5 +1,7 @@
 <div>
     <h1>Upcoming Angular 2 Events</h1>
     <hr />
-    <event-thumbnail [event]="event" (eventClick)="handleEventClicked($event)"></event-thumbnail>
+    <h3>{{ thumbnail.someProperty }}</h3>
+    <event-thumbnail #thumbnail [event]="event" (eventClick)="handleEventClicked($event)"></event-thumbnail>
+    <button class="btn btn-default" (click)="thumbnail.logFoo()" >Log me</button>
 </div>
