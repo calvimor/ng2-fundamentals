@@ -7,7 +7,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": false,
+    "noImplicitAny": false, //give us a little more flexibility to use as much or as little TypeScript as we would like
     "suppressImplicitAnyIndexErrors": true,
     "typeRoots": [
       "./node_modules/@types/"
