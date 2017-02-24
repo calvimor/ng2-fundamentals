@@ -1,20 +1,21 @@
 //this page will be access throw route like events/1
 import { Component } from '@angular/core'
 import { EventService } from '../share/event.service'
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
     templateUrl: '/app/events/events-details/event-details.component.html',
     styles: [`
-        .container { padding: 0 20px 0 20px;
-        .event-image { height: 100px; } }
+        .container { padding: 0 20px 0 20px; }
+        .event-image { height: 100px; } 
     `]
 })
 export class EventDetailsComponent {
     event: any
     
-    constructor(private eventService: EventService) {}
+    constructor(private eventService: EventService, private route: ActivatedRoute) {}
 
     ngOnInit() {
-        this.event = this.eventService.getEvent(1)
+        this.event = this.eventService.getEvent(+this.route.snapshot.params['id'])
     }
 }
