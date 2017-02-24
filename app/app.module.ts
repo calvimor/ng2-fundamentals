@@ -9,6 +9,7 @@ import { NavBarComponent } from './nav/navbar.component'
 import { EventService } from './events/share/event.service'
 import { ToastrService } from './common/toastr.service'
 import { EventDetailsComponent } from './events/events-details/event-details.component'
+import { CreateEventComponent } from './events/create-event.component'
 
 import { appRoutes } from './routes'
 
@@ -22,7 +23,8 @@ import { appRoutes } from './routes'
         EventsListComponent,
         EventThumbnailComponent,
         EventDetailsComponent,
-        NavBarComponent
+        NavBarComponent,
+        CreateEventComponent
     ],
     providers: [ EventService, ToastrService ],
     bootstrap: [ EventsAppComponent ]
