@@ -12,7 +12,7 @@ export class EventService {
         setTimeout(function() {
           subject.next(EVENTS)
           subject.complete()
-        }, 2100);
+        }, 100);
         return subject
     }
 
