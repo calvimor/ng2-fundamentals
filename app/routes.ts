@@ -1,10 +1,12 @@
 import { Routes } from '@angular/router'
-import { EventsListComponent } from './events/events-list.component'
-import { EventDetailsComponent } from './events/events-details/event-details.component'
-import { CreateEventComponent } from './events/create-event.component'
+import {
+    EventsListComponent,
+    EventDetailsComponent,
+    CreateEventComponent,
+    EventRouterActivator,
+    EventListResolver
+} from './events/index'
 import { Error404Component } from './errors/404.component'
-import { EventRouterActivator } from './events/events-details/event-route-activator.service'
-import { EventListResolver } from "./events/event-list-resolver.service";
 
 export const appRoutes:Routes = [
     { path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent'] }, //using function for preventing to leave page before saving data
